@@ -6,7 +6,10 @@ Core Practice booking widget). No backend or form needed.
 
 ## Files (all at repo root, no folders)
 - index.html - the landing page
-- hiral.png, abhishek.png - dentist headshots (served same-origin, no hotlink issue)
+- hiral.png, abhishek.png - dentist headshots
+- hcf.png - HCF health fund logo
+- hero.jpg - hero banner photo
+(all served same-origin, no hotlink issue)
 
 ## Deploy
 - Static only. Drop these into a repo/host (Vercel: import repo, preset "Other",
@@ -28,10 +31,9 @@ Core Practice booking widget). No backend or form needed.
   the correct figures.
 - Health fund logos load via an image proxy (wsrv.nl) from the practice site.
   If any don't show, send the logo files and I'll bundle them same-origin.
-- Booking: the Book Online buttons open Core Practice's secure booking in a new
-  tab. Core Practice blocks embedding on other domains, so it can't render inline
-  on Vercel. To embed it inline instead, host this page on
-  sethdentalgerringong.com.au (or have Core Practice whitelist this page's
-  domain), then use the commented inline <iframe> in index.html (search "INLINE EMBED").
-- HCF logo is pulled via a logo service as a stopgap. For crisp, consistent fund
-  logos (incl. HCF), send the logo files and I'll bundle them same-origin.
+- Booking: every "Book Online" button links straight to
+  https://sethdentalgerringong.com.au/book-online/ (opens in a new tab), which
+  is the practice's working booking page.
+- Fund logos: Bupa, Medibank, CBHS, ahm, TUH load via image proxy from the
+  practice site; HCF is bundled (hcf.png). Send the rest as files any time to
+  bundle them all same-origin for maximum crispness.
