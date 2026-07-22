@@ -7,7 +7,8 @@ Core Practice booking widget). No backend or form needed.
 ## Files (all at repo root, no folders)
 - index.html - the landing page
 - hiral.png, abhishek.png - dentist headshots
-- hcf.png - HCF health fund logo
+- hcf.png - HCF health fund logo (bundled same-origin)
+- nib.png - NIB health fund logo (bundled same-origin)
 - hero.jpg - hero banner photo
 (all served same-origin, no hotlink issue)
 
@@ -35,17 +36,15 @@ Core Practice booking widget). No backend or form needed.
 ## Notes to confirm before spending
 - Health fund logos load via an image proxy (wsrv.nl) from the practice site.
   If any don't show, send the logo files and I'll bundle them same-origin.
-- NIB is now showcased and called out as a highlighted "Now welcoming" tile
-  (first in the strip) and in the fund-names line. The NIB logo attempts the
-  same practice-site proxy path as the others (logo-nib.jpg); if that image
-  isn't on the site it falls back to clean "nib" text so the tile never shows
-  broken. Send me the NIB logo file to bundle it same-origin like HCF for a
-  crisp brand mark. Note: NIB is written as "now welcoming" rather than
-  "preferred provider" - if the practice is actually a preferred provider for
-  NIB, say so and I'll move it into the preferred-provider list.
+- NIB is showcased and called out as a highlighted "Now welcoming" tile (first
+  in the strip) and in the fund-names line. The NIB logo is now bundled
+  same-origin (nib.png), trimmed and padded to sit balanced with the other
+  logos. Note: NIB is written as "now welcoming" rather than "preferred
+  provider" - if the practice is actually a preferred provider for NIB, say so
+  and I'll move it into the preferred-provider list.
 - Booking: every "Book Online" button links straight to
   https://sethdentalgerringong.com.au/book-online/ (opens in a new tab), which
   is the practice's working booking page.
 - Fund logos: Bupa, Medibank, CBHS, ahm, TUH load via image proxy from the
-  practice site; HCF is bundled (hcf.png). Send the rest as files any time to
-  bundle them all same-origin for maximum crispness.
+  practice site; HCF and NIB are bundled (hcf.png, nib.png). Send the rest as
+  files any time to bundle them all same-origin for maximum crispness.

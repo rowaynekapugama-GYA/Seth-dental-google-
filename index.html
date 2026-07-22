@@ -118,7 +118,6 @@ function gtag_report_conversion(url) {
   .fund.feat{border:2px solid var(--orange);box-shadow:0 12px 26px rgba(217,81,35,.20)}
   .fund.feat .tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:9.5px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;padding:3px 10px;border-radius:40px;white-space:nowrap;box-shadow:0 6px 14px rgba(192,64,24,.28)}
   .fund{position:relative}
-  .fund-txt{font-family:var(--sans);font-weight:800;font-size:30px;letter-spacing:-1px;color:var(--orange)}
 
   /* offers */
   .offers{background:linear-gradient(180deg,var(--cream2),var(--cream))}
@@ -297,8 +296,8 @@ function gtag_report_conversion(url) {
     <p class="no-gap">We are a <b>preferred provider</b> for major health funds and offer <b>on-the-spot claiming</b>, so you can claim on the day and know your costs up front.</p>
     <div class="fund-strip">
       <!-- Fund logos load via image proxy from the practice site. If any don't appear, the fund name text below still lists them; or send the logo files to bundle them. -->
-      <!-- NIB: called out as a highlighted tile. Logo attempts the practice-site proxy; if that image isn't there it falls back to clean "nib" text so it never shows broken. Send the NIB logo file to bundle it same-origin like HCF. -->
-      <div class="fund feat"><span class="tag">Now welcoming</span><img src="https://wsrv.nl/?url=sethdentalgerringong.com.au/wp-content/uploads/2024/10/logo-nib.jpg&w=340&output=png" alt="NIB" onerror="this.onerror=null;var s=document.createElement('span');s.className='fund-txt';s.textContent='nib';this.replaceWith(s)"></div>
+      <!-- NIB: called out as a highlighted tile. Logo bundled same-origin (nib.png) like HCF. -->
+      <div class="fund feat"><span class="tag">Now welcoming</span><img src="nib.png" alt="NIB"></div>
       <div class="fund"><img src="https://wsrv.nl/?url=sethdentalgerringong.com.au/wp-content/uploads/2024/10/logo-bupa.jpg&w=340&output=png" alt="Bupa"></div>
       <div class="fund"><img src="https://wsrv.nl/?url=sethdentalgerringong.com.au/wp-content/uploads/2024/10/logo-medibank.jpg&w=340&output=png" alt="Medibank"></div>
       <div class="fund"><img src="hcf.png" alt="HCF"></div>
