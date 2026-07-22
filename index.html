@@ -115,6 +115,10 @@ function gtag_report_conversion(url) {
   .fund img{max-height:54px;width:auto;object-fit:contain}
   .fund-names{text-align:center;color:var(--muted);font-size:13px;margin-top:16px}
   .fund-names b{color:var(--ink)}
+  .fund.feat{border:2px solid var(--orange);box-shadow:0 12px 26px rgba(217,81,35,.20)}
+  .fund.feat .tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:9.5px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;padding:3px 10px;border-radius:40px;white-space:nowrap;box-shadow:0 6px 14px rgba(192,64,24,.28)}
+  .fund{position:relative}
+  .fund-txt{font-family:var(--sans);font-weight:800;font-size:30px;letter-spacing:-1px;color:var(--orange)}
 
   /* offers */
   .offers{background:linear-gradient(180deg,var(--cream2),var(--cream))}
@@ -293,6 +297,8 @@ function gtag_report_conversion(url) {
     <p class="no-gap">We are a <b>preferred provider</b> for major health funds and offer <b>on-the-spot claiming</b>, so you can claim on the day and know your costs up front.</p>
     <div class="fund-strip">
       <!-- Fund logos load via image proxy from the practice site. If any don't appear, the fund name text below still lists them; or send the logo files to bundle them. -->
+      <!-- NIB: called out as a highlighted tile. Logo attempts the practice-site proxy; if that image isn't there it falls back to clean "nib" text so it never shows broken. Send the NIB logo file to bundle it same-origin like HCF. -->
+      <div class="fund feat"><span class="tag">Now welcoming</span><img src="https://wsrv.nl/?url=sethdentalgerringong.com.au/wp-content/uploads/2024/10/logo-nib.jpg&w=340&output=png" alt="NIB" onerror="this.onerror=null;var s=document.createElement('span');s.className='fund-txt';s.textContent='nib';this.replaceWith(s)"></div>
       <div class="fund"><img src="https://wsrv.nl/?url=sethdentalgerringong.com.au/wp-content/uploads/2024/10/logo-bupa.jpg&w=340&output=png" alt="Bupa"></div>
       <div class="fund"><img src="https://wsrv.nl/?url=sethdentalgerringong.com.au/wp-content/uploads/2024/10/logo-medibank.jpg&w=340&output=png" alt="Medibank"></div>
       <div class="fund"><img src="hcf.png" alt="HCF"></div>
@@ -300,7 +306,7 @@ function gtag_report_conversion(url) {
       <div class="fund"><img src="https://wsrv.nl/?url=sethdentalgerringong.com.au/wp-content/uploads/2024/10/logo-ahm.jpg&w=340&output=png" alt="ahm"></div>
       <div class="fund"><img src="https://wsrv.nl/?url=sethdentalgerringong.com.au/wp-content/uploads/2024/11/logo-tuh.jpg&w=340&output=png" alt="TUH"></div>
     </div>
-    <p class="fund-names">Preferred provider for <b>Bupa</b>, <b>Medibank</b>, <b>HCF</b>, <b>CBHS</b> and <b>ahm</b> &middot; all other health funds welcome.</p>
+    <p class="fund-names">Preferred provider for <b>Bupa</b>, <b>Medibank</b>, <b>HCF</b>, <b>CBHS</b> and <b>ahm</b> &middot; now welcoming <b>NIB</b> members &middot; all other health funds welcome.</p>
   </div>
 </section>
 
@@ -323,7 +329,7 @@ function gtag_report_conversion(url) {
       <div class="off">
         <span class="kick">No health fund? No worries</span>
         <h3>New Patient Exam &amp; Clean</h3>
-        <div class="price">$199</div>
+        <div class="price">$249</div>
         <p>A full exam, X-rays, photos, professional clean and fluoride treatment, all in one visit.</p>
         <a class="btn btn-lg btn-primary" href="https://sethdentalgerringong.com.au/book-online/" target="_blank" rel="noopener">Book now</a>
         <span class="tc">T&amp;Cs apply. For patients without private health cover.</span>
@@ -338,7 +344,7 @@ function gtag_report_conversion(url) {
       <div class="off">
         <span class="kick">Brighten your smile</span>
         <h3>In-Chair Teeth Whitening</h3>
-        <div class="price">$649</div>
+        <div class="price">$699</div>
         <p>Professional in-chair whitening for a noticeably brighter smile in a single visit.</p>
         <a class="btn btn-lg btn-primary" href="https://sethdentalgerringong.com.au/book-online/" target="_blank" rel="noopener">Book whitening</a>
         <span class="tc">T&amp;Cs apply. Individual results vary. Offer for a limited time.</span>
@@ -353,10 +359,10 @@ function gtag_report_conversion(url) {
       <div class="off">
         <span class="kick">Protect your smile</span>
         <h3>Custom Mouthguards</h3>
-        <div class="price">From $220</div>
-        <p>Custom-fitted mouthguards for sport and night-time grinding, made just for you.</p>
+        <div class="price">Gap free<span class="reg">*</span> or $250</div>
+        <p>Custom-fitted mouthguards for sport and night-time grinding &mdash; gap free with a participating health fund, or $250 without cover.</p>
         <a class="btn btn-lg btn-primary" href="https://sethdentalgerringong.com.au/book-online/" target="_blank" rel="noopener">Book a fitting</a>
-        <span class="tc">T&amp;Cs apply. Limited appointments available.</span>
+        <span class="tc">*Gap free subject to your level of cover. T&amp;Cs apply.</span>
       </div>
     </div>
   </div>

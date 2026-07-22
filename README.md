@@ -25,12 +25,24 @@ Core Practice booking widget). No backend or form needed.
   Ads and fire gtag('event','conversion',{send_to:'...'}) on the widget's
   completion event (ask Core Practice for their booking-complete postMessage).
 
+## Current offers on the page (confirmed)
+- New Patient Exam & Clean (no health fund): $249
+- In-Chair Teeth Whitening: $699
+- Custom Mouthguards: gap free with a participating health fund, or $250 without
+  cover
+- No Gap Check-Up & Clean for new patients with a participating fund (unchanged)
+
 ## Notes to confirm before spending
-- Prices: whitening is shown at $649 and the new-patient no-fund package at $199
-  (their site shows some conflicting figures - $649/$699 and $199/$189). Confirm
-  the correct figures.
 - Health fund logos load via an image proxy (wsrv.nl) from the practice site.
   If any don't show, send the logo files and I'll bundle them same-origin.
+- NIB is now showcased and called out as a highlighted "Now welcoming" tile
+  (first in the strip) and in the fund-names line. The NIB logo attempts the
+  same practice-site proxy path as the others (logo-nib.jpg); if that image
+  isn't on the site it falls back to clean "nib" text so the tile never shows
+  broken. Send me the NIB logo file to bundle it same-origin like HCF for a
+  crisp brand mark. Note: NIB is written as "now welcoming" rather than
+  "preferred provider" - if the practice is actually a preferred provider for
+  NIB, say so and I'll move it into the preferred-provider list.
 - Booking: every "Book Online" button links straight to
   https://sethdentalgerringong.com.au/book-online/ (opens in a new tab), which
   is the practice's working booking page.
