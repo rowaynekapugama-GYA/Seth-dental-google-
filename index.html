@@ -135,6 +135,7 @@ function gtag_report_conversion(url) {
   .off.feature p{color:rgba(255,255,255,.94)}
   .off .tc{font-size:11px;color:var(--muted);margin-top:auto;padding-top:10px}
   .off.feature .tc{color:rgba(255,255,255,.8)}
+  .off.feature .ends{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.55);color:#fff}
   .off .btn{margin-top:14px}
 
   /* book */
@@ -243,12 +244,37 @@ function gtag_report_conversion(url) {
   @media(min-width:720px){.mobar{display:none}}
   body{padding-bottom:76px}
   @media(min-width:720px){body{padding-bottom:0}}
+
+  /* limited-time offer flag (hero) */
+  .offer-flag{display:inline-flex;align-items:center;gap:9px;background:rgba(217,81,35,.09);border:1px solid rgba(217,81,35,.22);color:var(--orange-deep);font-size:13.5px;font-weight:700;padding:8px 15px;border-radius:40px;margin:0 0 18px}
+  .offer-flag .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 rgba(217,81,35,.5);animation:offpulse 1.8s infinite}
+  @keyframes offpulse{0%{box-shadow:0 0 0 0 rgba(217,81,35,.45)}70%{box-shadow:0 0 0 8px rgba(217,81,35,0)}100%{box-shadow:0 0 0 0 rgba(217,81,35,0)}}
+  /* offer-ends line (offer card) */
+  .ends{display:inline-flex;align-self:flex-start;align-items:center;gap:7px;background:var(--sand);border:1px dashed var(--orange-lt);color:var(--orange-deep);font-weight:700;font-size:13px;padding:7px 12px;border-radius:10px;margin:-4px 0 14px}
+  .ends svg{width:15px;height:15px;flex:none}
+
+  /* limited-time offer popup */
+  .pop-ov{position:fixed;inset:0;z-index:200;background:rgba(36,20,12,.55);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease}
+  .pop-ov.show{opacity:1;visibility:visible}
+  .pop{position:relative;width:100%;max-width:440px;background:var(--cream);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:36px 30px 30px;text-align:center;transform:translateY(16px) scale(.97);transition:transform .32s cubic-bezier(.2,.7,.3,1)}
+  .pop-ov.show .pop{transform:none}
+  .pop .x{position:absolute;top:12px;right:13px;width:34px;height:34px;border:0;background:transparent;color:var(--muted);font-size:26px;line-height:1;cursor:pointer;border-radius:50%;transition:background .15s}
+  .pop .x:hover{background:var(--cream2);color:var(--ink)}
+  .pop .pill{display:inline-block;background:rgba(217,81,35,.12);color:var(--orange-deep);font-weight:800;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;padding:6px 14px;border-radius:40px;margin-bottom:15px}
+  .pop h3{font-size:28px;color:var(--ink);margin-bottom:9px}
+  .pop>p{font-size:15px;color:var(--ink-soft);margin:0 0 17px;line-height:1.55}
+  .pop .deadline{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--sand);border:1px dashed var(--orange-lt);color:var(--orange-deep);font-family:var(--serif);font-size:19px;font-weight:600;padding:13px 16px;border-radius:14px;margin-bottom:22px}
+  .pop .deadline svg{width:21px;height:21px;flex:none}
+  .pop-cta{display:flex;flex-direction:column;gap:10px}
+  .pop-cta .btn{width:100%}
+  .pop .tc{display:block;margin-top:15px;font-size:11.5px;color:var(--muted)}
+  @media(max-width:430px){.pop{padding:32px 20px 24px}.pop h3{font-size:24px}.pop .deadline{font-size:17px}}
 </style>
 </head>
 <body>
 
 <!-- announcement -->
-<div class="anno">New patients: <b>No Gap Check-Up &amp; Clean</b> with participating health funds &middot; Saturday appointments available</div>
+<div class="anno">&#9203; Limited-time offer &middot; <b>No Gap Check-Up &amp; Clean</b> for new patients ends <b>26 August</b> &middot; Saturday appointments available</div>
 
 <!-- header -->
 <header class="hdr">
@@ -271,6 +297,7 @@ function gtag_report_conversion(url) {
       <span class="badge"><span class="d"></span>Dentist in Gerringong &middot; Serving Kiama, Berry &amp; the Illawarra</span>
       <h1>New patients pay <span class="accent">no gap</span> for your check-up &amp; clean</h1>
       <p class="sub">With participating health funds, your comprehensive exam, scale and clean, and fluoride are covered with <strong>no out-of-pocket gap</strong>. Not with a fund? Ask about our new-patient exam &amp; clean package. Gentle family and emergency dentistry, right here in Gerringong.</p>
+      <p class="offer-flag"><span class="dot"></span><span>Limited-time offer &mdash; no gap for new patients ends <b>26 August</b></span></p>
       <div class="hero-cta">
         <a class="btn btn-lg btn-primary" href="tel:+61242340200" onclick="return gtag_report_conversion('tel:+61242340200');">&#9742;&nbsp; Call (02) 4234 0200</a>
         <a class="btn btn-lg btn-white" href="https://sethdentalgerringong.com.au/book-online/" target="_blank" rel="noopener">Book online</a>
@@ -283,7 +310,7 @@ function gtag_report_conversion(url) {
     </div>
     <div class="hero-media">
       <img src="hero.jpg" alt="Dr Hiral Seth using 3D dental scanning at Seth Dental Gerringong" loading="eager">
-      <div class="float"><b>No gap check-up &amp; clean</b><span>For new patients with participating health funds. T&amp;Cs apply.</span></div>
+      <div class="float"><b>No gap check-up &amp; clean</b><span>New patients with participating health funds &middot; ends 26 Aug. T&amp;Cs apply.</span></div>
     </div>
   </div>
 </section>
@@ -322,6 +349,7 @@ function gtag_report_conversion(url) {
         <span class="kick">New patients</span>
         <h3>No Gap Check-Up &amp; Clean</h3>
         <p>With participating health funds, pay no gap on your comprehensive exam, scale and clean, and fluoride treatment.</p>
+        <span class="ends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg>Limited time &middot; offer ends 26 August 2026</span>
         <a class="btn btn-lg btn-white" href="https://sethdentalgerringong.com.au/book-online/" target="_blank" rel="noopener">Book my check-up</a>
         <span class="tc">T&amp;Cs apply. Eligibility depends on your level of cover.</span>
       </div>
@@ -572,11 +600,58 @@ function gtag_report_conversion(url) {
   </div>
 </footer>
 
+<!-- limited-time offer popup -->
+<div class="pop-ov" id="offerPop" role="dialog" aria-modal="true" aria-labelledby="offerPopTitle" hidden>
+  <div class="pop">
+    <button class="x" type="button" aria-label="Close offer" onclick="closeOfferPop()">&times;</button>
+    <span class="pill">Limited-time offer</span>
+    <h3 id="offerPopTitle">No Gap Check-Up &amp; Clean</h3>
+    <p>New patients with a participating health fund pay <b>no gap</b> on your comprehensive exam, scale &amp; clean and fluoride treatment.</p>
+    <div class="deadline">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg>
+      Offer ends Wednesday 26 August 2026
+    </div>
+    <div class="pop-cta">
+      <a class="btn btn-lg btn-primary" href="https://sethdentalgerringong.com.au/book-online/" target="_blank" rel="noopener" onclick="closeOfferPop()">Book online</a>
+      <a class="btn btn-lg btn-white" href="tel:+61242340200" onclick="return gtag_report_conversion('tel:+61242340200');">&#9742;&nbsp; Call (02) 4234 0200</a>
+    </div>
+    <span class="tc">T&amp;Cs apply. Eligibility depends on your level of cover.</span>
+  </div>
+</div>
+
 <!-- sticky mobile bar -->
 <div class="mobar">
   <a class="btn btn-call" href="tel:+61242340200" onclick="return gtag_report_conversion('tel:+61242340200');">&#9742; Call now</a>
   <a class="btn btn-book" href="https://sethdentalgerringong.com.au/book-online/" target="_blank" rel="noopener">Book online</a>
 </div>
+
+<script>
+  // Limited-time offer popup
+  (function(){
+    var ov = document.getElementById('offerPop');
+    if(!ov) return;
+    var opened = false;
+    function seen(){ try { return sessionStorage.getItem('sdgOfferSeen') === '1'; } catch(e){ return false; } }
+    function markSeen(){ try { sessionStorage.setItem('sdgOfferSeen','1'); } catch(e){} }
+    window.openOfferPop = function(){
+      if(opened) return;
+      opened = true;
+      ov.hidden = false;
+      void ov.offsetWidth; // force reflow so the transition runs
+      ov.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      markSeen();
+    };
+    window.closeOfferPop = function(){
+      ov.classList.remove('show');
+      document.body.style.overflow = '';
+      setTimeout(function(){ ov.hidden = true; }, 300);
+    };
+    ov.addEventListener('click', function(e){ if(e.target === ov) closeOfferPop(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && ov.classList.contains('show')) closeOfferPop(); });
+    if(!seen()){ setTimeout(window.openOfferPop, 1200); }
+  })();
+</script>
 
 <script>
   // Best-effort autoresize for the Core Practice booking widget (if it posts a height)

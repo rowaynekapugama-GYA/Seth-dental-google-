@@ -33,6 +33,22 @@ Core Practice booking widget). No backend or form needed.
   cover
 - No Gap Check-Up & Clean for new patients with a participating fund (unchanged)
 
+## Limited-time offer + popup (ends 26 August 2026)
+- The No Gap Check-Up & Clean is now framed as a limited-time offer ending
+  Wednesday 26 August 2026. This end date appears in: the top announcement bar,
+  a hero "Limited-time offer" pill, the hero photo card, the No Gap offer card,
+  and a popup.
+- The popup opens ~1.2s after load, once per browser session (sessionStorage,
+  wrapped so it never errors). It's dismissible via the X, the backdrop, or the
+  Esc key. Its Book/Call buttons use the same booking link and click-to-call
+  conversion tracking as the rest of the page.
+- IMPORTANT: this is date-bound. On/after 27 August 2026, remove or update the
+  popup and the offer wording (search the file for "26 August" and "offer" to
+  find every spot), or extend the date if the offer is continuing.
+- To change the date, update the text in those spots. To turn the popup off,
+  delete the popup markup block (id="offerPop") or its opening timer in the
+  "Limited-time offer popup" script.
+
 ## Notes to confirm before spending
 - Health fund logos load via an image proxy (wsrv.nl) from the practice site.
   If any don't show, send the logo files and I'll bundle them same-origin.
