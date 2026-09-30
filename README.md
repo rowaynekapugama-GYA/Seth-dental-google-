@@ -33,21 +33,31 @@ Core Practice booking widget). No backend or form needed.
   cover
 - No Gap Check-Up & Clean for new patients with a participating fund (unchanged)
 
-## Limited-time offer + popup (ends 30 September 2026)
-- The No Gap Check-Up & Clean is now framed as a limited-time offer ending
-  Wednesday 30 September 2026. This end date appears in: the top announcement bar,
-  a hero "Limited-time offer" pill, the hero photo card, the No Gap offer card,
-  and a popup.
+## No Gap offer + popup (auto-expires after 23 December 2026)
+- The No Gap Check-Up & Clean is framed as a "back by popular demand" offer
+  running up to and including Wednesday 23 December 2026. The offer wording
+  appears in: the top announcement bar, a hero pill, the hero photo card, the
+  No Gap offer card, and a popup.
 - The popup opens ~1.2s after load, once per browser session (sessionStorage,
   wrapped so it never errors). It's dismissible via the X, the backdrop, or the
   Esc key. Its Book/Call buttons use the same booking link and click-to-call
   conversion tracking as the rest of the page.
-- IMPORTANT: this is date-bound. On/after 1 October 2026, remove or update the
-  popup and the offer wording (search the file for "30 September" and "offer" to
-  find every spot), or extend the date if the offer is continuing.
-- To change the date, update the text in those spots. To turn the popup off,
-  delete the popup markup block (id="offerPop") or its opening timer in the
-  "Limited-time offer popup" script.
+- AUTO-EXPIRY (no redeploy needed): a small script in the <head> checks the
+  date. From 24 December 2026 the page switches itself back to evergreen
+  wording automatically - the popup stops opening, the offer pill and the
+  offer-ends chip are hidden, and the announcement bar and hero card fall back
+  to plain "No Gap with participating health funds" copy. You do NOT need to
+  deploy a new version on the day.
+  - Caveat: the check uses the visitor's own device date (there's no server on
+    a static page). This is reliable for effectively all real visitors; only
+    someone whose device clock is badly wrong would see the wrong state.
+- To CHANGE the end date later (extend again, or bring it forward): edit one
+  line in the <head> script - `var offerEnd = new Date(2026, 11, 24, ...)` -
+  where month is 0-indexed (11 = December) and the day is the FIRST day the
+  offer should be OFF (so 24 = live through the 23rd). Then update the visible
+  date text (search the file for "23 December").
+- To turn the popup off entirely, delete the popup markup block (id="offerPop")
+  or its opening timer in the "Limited-time offer popup" script.
 
 ## Notes to confirm before spending
 - Health fund logos load via an image proxy (wsrv.nl) from the practice site.

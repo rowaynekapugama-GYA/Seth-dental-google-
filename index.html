@@ -7,14 +7,6 @@
 <title>Dentist Gerringong | No Gap Check-Up &amp; Clean | Seth Dental Gerringong</title>
 <meta name="description" content="Looking for a dentist near you in Gerringong? New patients pay no gap for check-up and clean with participating health funds. Gentle family and emergency dentistry serving Gerringong, Kiama, Berry and the Illawarra. Saturday appointments available. Call (02) 4234 0200 or book online.">
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PN2PJXD8');</script>
-<!-- End Google Tag Manager -->
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16742176443"></script>
 <script>
@@ -37,6 +29,16 @@ function gtag_report_conversion(url) {
   });
   return false;
 }
+</script>
+
+<!-- Offer auto-expiry: the no-gap offer runs up to and including 23 Dec 2026, then the page
+     switches itself back to evergreen wording from 24 Dec. Uses the visitor's local date. -->
+<script>
+  (function(){
+    var offerEnd = new Date(2026, 11, 24, 0, 0, 0); // midnight starting 24 December (month is 0-indexed, so 11 = Dec)
+    window.OFFER_LIVE = new Date() < offerEnd;
+    if(!window.OFFER_LIVE){ document.documentElement.className += ' offer-ended'; }
+  })();
 </script>
 
 <link href="https://fonts.cdnfonts.com/css/recoleta" rel="stylesheet">
@@ -261,6 +263,12 @@ function gtag_report_conversion(url) {
   .ends{display:inline-flex;align-self:flex-start;align-items:center;gap:7px;background:var(--sand);border:1px dashed var(--orange-lt);color:var(--orange-deep);font-weight:700;font-size:13px;padding:7px 12px;border-radius:10px;margin:-4px 0 14px}
   .ends svg{width:15px;height:15px;flex:none}
 
+  /* offer auto-expiry: .offer-on shows while live, .offer-off shows once ended, .offer-el is offer-only */
+  .offer-off{display:none}
+  html.offer-ended .offer-on{display:none}
+  html.offer-ended .offer-off{display:inline}
+  html.offer-ended .offer-el{display:none !important}
+
   /* limited-time offer popup */
   .pop-ov{position:fixed;inset:0;z-index:200;background:rgba(36,20,12,.55);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease}
   .pop-ov.show{opacity:1;visibility:visible}
@@ -280,13 +288,9 @@ function gtag_report_conversion(url) {
 </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN2PJXD8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <!-- announcement -->
-<div class="anno">&#9203; Limited-time offer &middot; <b>No Gap Check-Up &amp; Clean</b> for new patients ends <b>30 September</b> &middot; Saturday appointments available</div>
+<div class="anno"><span class="offer-on">&#9203; Back by popular demand &middot; <b>No Gap Check-Up &amp; Clean</b> for new patients now extended to <b>23 December</b> &middot; Saturday appointments available</span><span class="offer-off">New patients: <b>No Gap Check-Up &amp; Clean</b> with participating health funds &middot; Saturday appointments available</span></div>
 
 <!-- header -->
 <header class="hdr">
@@ -309,7 +313,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="badge"><span class="d"></span>Dentist in Gerringong &middot; Serving Kiama, Berry &amp; the Illawarra</span>
       <h1>New patients pay <span class="accent">no gap</span> for your check-up &amp; clean</h1>
       <p class="sub">With participating health funds, your comprehensive exam, scale and clean, and fluoride are covered with <strong>no out-of-pocket gap</strong>. Not with a fund? Ask about our new-patient exam &amp; clean package. Gentle family and emergency dentistry, right here in Gerringong.</p>
-      <p class="offer-flag"><span class="dot"></span><span>Limited-time offer &mdash; no gap for new patients ends <b>30 September</b></span></p>
+      <p class="offer-flag offer-el"><span class="dot"></span><span>Back by popular demand &mdash; no gap for new patients now until <b>23 December</b></span></p>
       <div class="hero-cta">
         <a class="btn btn-lg btn-primary" href="tel:+61242340200" onclick="return gtag_report_conversion('tel:+61242340200');">&#9742;&nbsp; Call (02) 4234 0200</a>
         <a class="btn btn-lg btn-white" href="https://sethdentalgerringong.com.au/book-online/" target="_blank" rel="noopener">Book online</a>
@@ -322,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="hero-media">
       <img src="hero.jpg" alt="Dr Hiral Seth using 3D dental scanning at Seth Dental Gerringong" loading="eager">
-      <div class="float"><b>No gap check-up &amp; clean</b><span>New patients with participating health funds &middot; ends 30 Sep. T&amp;Cs apply.</span></div>
+      <div class="float"><b>No gap check-up &amp; clean</b><span class="offer-on">New patients with participating health funds &middot; until 23 Dec. T&amp;Cs apply.</span><span class="offer-off">For new patients with participating health funds. T&amp;Cs apply.</span></div>
     </div>
   </div>
 </section>
@@ -361,7 +365,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="kick">New patients</span>
         <h3>No Gap Check-Up &amp; Clean</h3>
         <p>With participating health funds, pay no gap on your comprehensive exam, scale and clean, and fluoride treatment.</p>
-        <span class="ends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg>Limited time &middot; offer ends 30 September 2026</span>
+        <span class="ends offer-el"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg>Extended by popular demand &middot; ends 23 December 2026</span>
         <a class="btn btn-lg btn-white" href="https://sethdentalgerringong.com.au/book-online/" target="_blank" rel="noopener">Book my check-up</a>
         <span class="tc">T&amp;Cs apply. Eligibility depends on your level of cover.</span>
       </div>
@@ -616,12 +620,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="pop-ov" id="offerPop" role="dialog" aria-modal="true" aria-labelledby="offerPopTitle" hidden>
   <div class="pop">
     <button class="x" type="button" aria-label="Close offer" onclick="closeOfferPop()">&times;</button>
-    <span class="pill">Limited-time offer</span>
+    <span class="pill">Back by popular demand</span>
     <h3 id="offerPopTitle">No Gap Check-Up &amp; Clean</h3>
-    <p>New patients with a participating health fund pay <b>no gap</b> on your comprehensive exam, scale &amp; clean and fluoride treatment.</p>
+    <p>It's been so popular we've extended it. New patients with a participating health fund pay <b>no gap</b> on your comprehensive exam, scale &amp; clean and fluoride treatment.</p>
     <div class="deadline">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg>
-      Offer ends Wednesday 30 September 2026
+      Now extended to Wednesday 23 December 2026
     </div>
     <div class="pop-cta">
       <a class="btn btn-lg btn-primary" href="https://sethdentalgerringong.com.au/book-online/" target="_blank" rel="noopener" onclick="closeOfferPop()">Book online</a>
@@ -661,7 +665,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     };
     ov.addEventListener('click', function(e){ if(e.target === ov) closeOfferPop(); });
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && ov.classList.contains('show')) closeOfferPop(); });
-    if(!seen()){ setTimeout(window.openOfferPop, 1200); }
+    if(window.OFFER_LIVE && !seen()){ setTimeout(window.openOfferPop, 1200); }
   })();
 </script>
 
